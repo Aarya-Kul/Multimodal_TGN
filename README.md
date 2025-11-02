@@ -26,13 +26,13 @@ Install required dependencies:
 pip install -r requirements.txt
 ```
 
-Make sure your API keys and sensitive files are stored in a `.env` file which is already gitignored.
+If you want to run scrape.py, you must create a TMDB API Key and export that in to your environment
 
 ---
 
-## 📂 Data Setup
+## Data Setup
 
-This repository requires additional dataset files that are not tracked in Git due to their size. These files are stored on Google Drive.
+This repository requires additional dataset files that are not tracked in Git due to their size. These files are stored on a shared Google Drive.
 
 To download the required dataset(s), run the following script:
 ```bash
