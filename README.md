@@ -26,7 +26,7 @@ Install required dependencies:
 pip install -r requirements.txt
 ```
 
-If you want to run scrape.py, you must create a TMDB API Key and export that in to your environment
+If you want to run `scrape.py`, you must create a TMDB API Key and export that in to your environment
 
 ---
 
@@ -41,7 +41,7 @@ bash scripts/download_data.sh
 
 Make sure `wget` is installed on your system. You may need to edit the script to include your own Google Drive file IDs if you're working with new or different data.
 
-### 🧠 Tip: Finding Google Drive File IDs
+### Tip: Finding Google Drive File IDs
 
 To download a file using its Drive ID:
 
