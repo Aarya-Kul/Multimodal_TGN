@@ -53,6 +53,39 @@ To download a file using its Drive ID:
 
 ---
 
+## Running `scrape.py`
+
+The `scrape.py` script enriches MovieLens data with TMDB metadata and optionally downloads movie posters.
+
+### 1. Export Your TMDB API Key
+
+Create an API key on [TMDB](https://www.themoviedb.org/documentation/api) and export it to your environment:
+```bash
+export TMDB_API_KEY="your_tmdb_api_key"   # Mac/Linux
+setx TMDB_API_KEY "your_tmdb_api_key"     # Windows (new shell required)
+```
+
+### 2. Run the Script
+
+Basic usage (writes output CSV to `data/ml32m_tmdb_enriched.csv`):
+```bash
+python src/scrape.py
+```
+This will run the script with default arguments, but they are configurable. Remember to set a `--limit` for testing! See below:
+
+**Optional arguments:**
+```bash
+python src/scrape.py --movielens-dir data/ml-32m         # path to MovieLens CSVs
+python src/scrape.py --out data/enriched.csv             # output CSV path
+python src/scrape.py --limit 1000                        # limit number of movies (for testing)
+python src/scrape.py --download-images                   # download poster images
+python src/scrape.py --poster-size w500                  # choose TMDB poster size
+python src/scrape.py --concurrency 10                    # max concurrent TMDB requests
+```
+
+After running with `--download-images`, poster images will be saved to `data/posters/`.
+---
+
 ## Project Structure
 ```
 Multimodal_TGN/
